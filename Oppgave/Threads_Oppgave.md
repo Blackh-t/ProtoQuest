@@ -25,4 +25,4 @@ I denne oppgaven skal du utforske hvordan disse to tilnærmingene påvirker ytel
 
 ---
 
-Dette gir en god balanse mellom teoretisk forståelse og praktisk anvendelse, samtidig som du får muligheten til å teste forskjellige tilnærminger og forstå hvordan de påvirker ytelsen i ulike scenarier.
+Dette gir en god balanse mellom teoretisk forståelse og praktisk anvendelse, samtidig som du får muligheten til å teste forskjellige tilnærminger og forst

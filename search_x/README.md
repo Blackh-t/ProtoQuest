@@ -9,31 +9,28 @@ Web Scraping Performance with Multiprocessing, measured using `std::time::Instan
 
 #### Threads
 
-- Threads spawn OS-Thread thats blocks CPU from running other task, while it wait for the response.
+- Spawn OS-Thread thats blocks CPU from running other task, while it wait for the response.
 
-- Threads are expensive to create and maintain, 
+- Expensive to create and maintain, 
 due to the spawning of OS-Thread requires resources and
 can overhelm the system if too many threads are created.
 
-- The threads blokking leads to delays, as the CPU must wait for each task 
+- Blocking leads to delays, as the CPU must wait for each task 
 to complete instead of efficiently moving on to other work.
 
 
 #### Async Tokio
-- Tokio spawn async task that can be paused and resumed, that is efficient for CPU to run other task while waiting for response.
+- Spawn async task that can be paused and resumed, that is efficient for CPU to run other task while waiting for response.
 
-- Tokio runs in "thread pool" which allows the system to handle multiple tasks in a pool of threads.
-Therefore, it used less resources, due to use of resources are reserved for a pool that can 
-handle multiple tasks efficiently.
+- Runs in a "thread pool," which lets the system handle multiple tasks using a group of threads. This saves resources because the threads in the pool share the work and use resources more efficiently.
 
-- Tokio is non-blocking, which means it can handle multiple tasks at the same time,
+- Non-blocking, which means it can handle multiple tasks at the same time,
 by waiting for the response from the server it can run other tasks,
 then resume the task when the response is ready.
 
 
 #### Tests results:
-Align with the understanding of Tokio Async let theads run while waiting for its response,
-this lead to the Tokio have to wait until the threads are done, wherefore the threads are faster.
+The test results align with the understanding of Tokio Async, where threads take over the CPU while waiting for a response. This approach causes delays in Tokio until the threads complete their tasks, which is why the threads appear to be faster in the test results.
 
 ```bash
 running 2 tests

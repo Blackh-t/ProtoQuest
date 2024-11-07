@@ -1,4 +1,4 @@
-## Comparing Thread-based vs Async-Tokio Rust
+## Comparing Thread-based vs Async-based
 
 Web Scraping Performance with Multiprocessing, measured using `std::time::Instant`
 
